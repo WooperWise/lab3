@@ -99,4 +99,14 @@ public:
         Resize(x, y);
     }
 
+    void RandomInt () {
+        item.real = rand() % 1000;
+        item.imaginary = rand() % 1000;
+    }
+
+    void RandomDouble () {
+        item.real = (double)(rand() % 10000) / 1000;
+        item.imaginary = (double)(rand() % 10000) / 1000;
+    }
+
 };

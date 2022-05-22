@@ -3,6 +3,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
+#include <ctime>
+#include <sys/types.h>
 #include "ComplexNumber.hpp"
 
 
@@ -81,6 +83,18 @@ public:
 
     T NormVector () {
         return (T)(sqrt((vector.x * vector.x) + (vector.y * vector.y) + (vector.z * vector.z)));
+    }
+
+    void RandomInt () {
+        vector.x = rand() % 1000;
+        vector.y = rand() % 1000;
+        vector.z = rand() % 1000;
+    }
+
+    void RandomDouble () {
+        vector.x = (double)(rand() % 10000) / 1000;
+        vector.y = (double)(rand() % 10000) / 1000;
+        vector.z = (double)(rand() % 10000) / 1000;
     }
 
 };
@@ -178,5 +192,17 @@ public:
         time_vector.vector.x + time_vector.vector.y; time_vector.vector.x + time_vector.vector.z;
         time_vector.vector.x.SqrtComplex();
         return time_vector.vector.x;
+    }
+
+    void RandomInt () {
+        vector.x.RandomInt();
+        vector.y.RandomInt(); 
+        vector.z.RandomInt();
+    }
+
+    void RandomDouble () {
+        vector.x.RandomDouble();
+        vector.y.RandomDouble(); 
+        vector.z.RandomDouble();
     }
 };
