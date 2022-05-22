@@ -50,7 +50,7 @@ public:
         Resize(this->item.real - item.item.real, this->item.imaginary - item.item.imaginary);
     }
 
-    void operator=(ComplexNum<T> item) {
+    void operator=(const ComplexNum<T> &item) {
         Resize(item.item.real, item.item.imaginary);
     }
 

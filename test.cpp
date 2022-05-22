@@ -13,9 +13,10 @@ int main () {
     ComplexVector<int> a(aa, bb, cc);
     ComplexVector<int> b(cc, aa, bb);
     ComplexNum<int> tmp;
-    a.Print();
-    a * 7;
-    a.Print();
+
+    tmp = a.NormVector();
+
+    tmp.Print(); cout << "\n";
 
    // tmp.Print(); cout << "\n";
 
