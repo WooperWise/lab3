@@ -29,10 +29,11 @@ int main() {
                 vector1.Resize(vect[0], vect[1], vect[2]);
                 p.Vect2(); cin >> vect[0] >> vect[1] >> vect[2];
                 vector2.Resize(vect[0], vect[1], vect[2]);
+            } else { 
+                if (flag == 'N') {
+                    vector1.RandomInt(); vector2.RandomInt();                
+                } else throw runtime_error("You entered wrong.");
             }
-            if (flag == 'N') {
-                vector1.RandomInt(); vector2.RandomInt();                
-            } else throw runtime_error("You entered wrong.");
             p.Good();
 
             exit2 = 1;
@@ -44,7 +45,7 @@ int main() {
                     p.Menue();
                     break;
                 } case '0': {
-                    vector1.RandomInt(); vector2.RandomDouble();
+                    vector1.RandomInt(); vector2.RandomInt();
                     p.Good();
                     break;
                 } case '1': {
@@ -71,8 +72,8 @@ int main() {
                     vector1.Print();
                     break;
                 } case '7': {
-                    vector1 * vector2;
-                    vector1.Print();
+                    item = vector1 * vector2;
+                    cout << item << "\n";
                     break;
                 } case '8': {
                     item = vector1.NormVector();
@@ -82,7 +83,7 @@ int main() {
                     exit2 = 0;
                     break;
                 } case 'P': {
-                    vector1.Print();
+                    vector1.Print(); vector2.Print();
                 }}
             }
             break;
@@ -96,10 +97,11 @@ int main() {
                 vector1.Resize(vect[0], vect[1], vect[2]);
                 p.Vect2(); cin >> vect[0] >> vect[1] >> vect[2];
                 vector2.Resize(vect[0], vect[1], vect[2]);
+            } else { 
+                if (flag == 'N') {
+                    vector1.RandomDouble(); vector2.RandomDouble();                
+                } else throw runtime_error("You entered wrong.");
             }
-            if (flag == 'N') {
-                vector1.RandomDouble(); vector2.RandomDouble();                
-            } else throw runtime_error("You entered wrong.");
             p.Good();
 
             exit2 = 1;
@@ -138,8 +140,8 @@ int main() {
                     vector1.Print();
                     break;
                 } case '7': {
-                    vector1 * vector2;
-                    vector1.Print();
+                    item = vector1 * vector2;
+                    cout << item << "\n";
                     break;
                 } case '8': {
                     item = vector1.NormVector();
@@ -149,7 +151,7 @@ int main() {
                     exit2 = 0;
                     break;
                 } case 'P': {
-                    vector1.Print();
+                    vector1.Print(); vector2.Print();
                 }}
             }
             break;
@@ -172,10 +174,11 @@ int main() {
                 p.CmplxNmbrY(); cin >> real >> imaginary; Y.Resize(real, imaginary);
                 p.CmplxNmbrZ(); cin >> real >> imaginary; Z.Resize(real, imaginary);
                 vector2.Resize(X, Y, Z);
+            } else { 
+                if (flag == 'N') {
+                    vector1.RandomInt(); vector2.RandomInt();
+                } else throw runtime_error("You entered wrong.");
             }
-            if (flag == 'N') {
-                vector1.RandomInt(); vector2.RandomInt();
-            } else throw runtime_error("You entered wrong.");
             p.Good();
 
             exit2 = 1;
@@ -228,7 +231,7 @@ int main() {
                     exit2 = 0;
                     break;
                 } case 'P': {
-                    vector1.Print();
+                    vector1.Print(); vector2.Print();
                 }}
             }
             break;
@@ -251,10 +254,11 @@ int main() {
                 p.CmplxNmbrY(); cin >> real >> imaginary; Y.Resize(real, imaginary);
                 p.CmplxNmbrZ(); cin >> real >> imaginary; Z.Resize(real, imaginary);
                 vector2.Resize(X, Y, Z);
+            } else { 
+                if (flag == 'N') {
+                    vector1.RandomDouble(); vector2.RandomDouble();
+                } else throw runtime_error("You entered wrong.");
             }
-            if (flag == 'N') {
-                vector1.RandomDouble(); vector2.RandomDouble();
-            } else throw runtime_error("You entered wrong.");
             p.Good();
 
             exit2 = 1;
@@ -307,7 +311,7 @@ int main() {
                     exit2 = 0;
                     break;
                 } case 'P': {
-                    vector1.Print();
+                    vector1.Print(); vector2.Print();
                 }}
             }
             break;
