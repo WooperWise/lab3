@@ -60,7 +60,7 @@ public:
         } else {return false;}
     }
 
-    bool operator!=(ComplexNum<T> item) {
+    bool operator!=(const ComplexNum<T> &item) {
         if ((item.item.real != this->item.real) && (item.item.imaginary != this->item.imaginary)) {
             return true;
         } else {return false;}
