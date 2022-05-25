@@ -46,7 +46,7 @@ int main () {
     if (int_item != -32) throw runtime_error("Scalar mult test failed.\n");
     int_item = int_vector1.NormVector();
     if (int_item != 3) throw runtime_error("Norm vector test failed.\n");
-    cout << "Test int vector passing!\n\n";
+    cout << "Test int vector passed!\n\n";
 
     cout << "Starting double vector.\n";
     if (double_vector1.GetX() != 1.1) throw runtime_error("GetX test failed.\n");
@@ -63,7 +63,7 @@ int main () {
     if (fabs(double_item + 34.8) > 0.05) throw runtime_error("Scalar mult test failed.\n");
     double_item = double_vector1.NormVector();
     if (fabs(double_item - 3.9) > 0.05) throw runtime_error("Norm vector test failed.\n");
-    cout << "Test double vector passing!\n\n";
+    cout << "Test double vector passed!\n\n";
 
     cout << "Starting test complex int vector.\n";
     if (cmplx_int_vector1.GetX() != int_X1) throw runtime_error("GetX test failed.\n");
@@ -81,7 +81,7 @@ int main () {
     if (cmplx_int_item != ans_int_item1) throw runtime_error("Scalar mult test failed.\n");
     cmplx_int_item = cmplx_int_vector1.NormVector();
     if (cmplx_int_item != ans_int_item2) throw runtime_error("Norm vector test failed.\n");
-    cout << "Test complex int vector passing!\n\n";
+    cout << "Test complex int vector passed!\n\n";
 
     cout << "Starting test complex double vector.\n";
     if (cmplx_double_vector1.GetX() != double_X1) throw runtime_error("GetX test failed.\n");
@@ -102,7 +102,7 @@ int main () {
     cmplx_double_item = cmplx_double_vector1.NormVector();
     if ((fabs(cmplx_double_item.GetReal() - 11.6) > 0.05) && (fabs(cmplx_double_item.GetImag() + 13.86) > 0.05)) 
         throw runtime_error("Norm vector test failed.\n");
-    cout << "Test complex double vector passing!\n\n";
+    cout << "Test complex double vector passed!\n\n";
 
    return 0;    
 }
